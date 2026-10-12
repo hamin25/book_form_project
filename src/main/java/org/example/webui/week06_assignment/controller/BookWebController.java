@@ -21,4 +21,9 @@ public class BookWebController {
         model.addAttribute("books", bookService.findAll());
         return "books/list";
     }
+
+    @GetMapping("/new")
+    public String form(){
+        return "books/form";
+    }
 }
