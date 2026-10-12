@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book list</title>
+</head>
+<body>
+    <h1> Book list</h1>
+
+    <a th:href="@{/books/add}">Add book</a>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>price</th>
+                <th>ISBN</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="book : ${books}">
+                <td th:text="${book.id}">Id</td>
+                <td th:text="${book.title}">TITLE</td>
+                <td th:text="${book.author}">AUTHOR</td>
+                <td th:text="${book.category}">CATEGORY</td>
+                <td th:text="${book.price}">PRICE</td>
+                <td th:text="${book.isbn}">ISBN</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
