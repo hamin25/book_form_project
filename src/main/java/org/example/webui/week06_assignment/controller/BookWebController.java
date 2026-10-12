@@ -1,9 +1,13 @@
 package org.example.webui.week06_assignment.controller;
 
+
+import org.example.webui.week06_assignment.dto.BookRequest;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.example.webui.week06_assignment.service.BookService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -25,5 +29,12 @@ public class BookWebController {
     @GetMapping("/new")
     public String form(){
         return "books/form";
+    }
+
+    @PostMapping
+    public String create(@ModelAttribute BookRequest request){
+        bookService.create(request);
+        return "redirect:/books";
+
     }
 }
