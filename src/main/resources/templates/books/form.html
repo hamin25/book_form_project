@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book registration</title>
+</head>
+<body>
+    <h1>Books Registration</h1>
+
+    <form th:action="@{/books}" method="post">
+        <div>
+            <label for="title">Book Title</label>
+            <input type="text" id="title" name="title" placeholder="Book Title">
+        </div>
+        <div>
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" placeholder="Author">
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <input type="text" id="category" name="category" placeholder="Category">
+        </div>
+
+        <div>
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" placeholder="Price">
+        </div>
+        <div>
+            <label for="isbn">ISBN</label>
+            <input type="text" id="isbn" name="isbn" placeholder="ISBN">
+        </div>
+
+        <button type="submit">Submit</button> <br>
+        <a th:href="@{/books}">List</a>
+
+    </form>
+</body>
+</html>
