@@ -3,12 +3,12 @@
 ① 프로젝트 소개
 
 프로젝트 주제 : Book Management Web
-Render 배포 URL : 
+Render 배포 URL : https://book-form-project.onrender.com/books
 프로젝트 구조 : 
     java (controller(WebController(이번 과제에 사용), Controller), service, repository, domain, dto)
     resources (templates(books/list.html, form.html), static/css(style.css))
 실행 방법 : Week06AssignmentApplication실행 후 브라우저에 접속
-주요 화면 : 따로 image 폴더 제작 후 넣어두겠습니다.
+주요 화면 : 따로 images 폴더 제작 후 넣어두겠습니다.
 Web Endpoint 표
     HTTP Method	URL	기능	반환
     GET	/books	전체 목록	books/list View
