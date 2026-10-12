@@ -1,0 +1,12 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+}
